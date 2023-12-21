@@ -47,7 +47,7 @@ tank:
 # https://github.com/victronenergy/venus/wiki/dbus#pv-inverters
 pvinverter:
   ProductId:
-    default: 45069 # 0xB00D, 0xB00D, 45069 = ET340, 45068 = ET112, ESS Demo mode uses 45058
+    default: 45068 # 0xB00D, 0xB00D, 45069 = ET340, 45068 = ET112, ESS Demo mode uses 45058
   CustomName:
     default: "My PV Inverter"
     persist: true
@@ -71,20 +71,20 @@ pvinverter:
     description: "grid, pvinverter, genset, acload"    
     persist: true
     default: "pvinverter"
-#  PhaseConfig:
-#    description: "0=3P.n; 1=3P.l; 2=2P; 3=1P; 4=3P"
-#    persist: true
-#    default: 0
-#    min: 0
-#    max: 4
-#  DeviceType: 
-#    description: "???"
-#    persist: true
-#    default: 71 # valued used by pvinverter in ESS demo mode
-#  Serial:
-#    description: "device serial number"
-#    persist: true
-#    default: ""
+  PhaseConfig:
+    description: "0=3P.n; 1=3P.l; 2=2P; 3=1P; 4=3P"
+    persist: true
+    default: 3
+    min: 0
+    max: 4
+  DeviceType: 
+    description: "Device type"
+    persist: true
+    default: 120 # 120 used by ET122; 71 used by pvinverter in ESS demo mode
+  Serial:
+    description: "device serial number"
+    persist: true
+    default: "123456"
   Ac/MaxPower: # Max rated power (in Watts) of the inverter
     description: "W"
     persist: true
